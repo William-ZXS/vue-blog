@@ -1,4 +1,4 @@
-## start a blog with vue.js ang golang
+## start a blog with vue.js and golang
 ### Front-end using vue.js
 
 
