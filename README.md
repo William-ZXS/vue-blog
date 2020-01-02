@@ -1,4 +1,5 @@
-# vue-golang-blog
+# vue-golang-blog   
+# Front-end using vue.js
 start a blog from 0 using vue.js and golang! wow! let's do it!
 
 npm install
