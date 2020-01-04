@@ -1,5 +1,6 @@
 ## start a blog with vue.js and golang
-### Front-end using vue.js
+
+vue.j|elementui
 
 
 npm install
