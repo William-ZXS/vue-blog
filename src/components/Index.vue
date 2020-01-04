@@ -1,25 +1,29 @@
 <template>
   <div class="TajMahal">
-    <div class="pics"></div>
-    <div class="title">
-         <el-button type="success">进入博客</el-button>
-    </div>
+    <!-- <div class="pics"></div> -->
+
     <div class="air1">
-      <div class="block">
-        <el-carousel trigger="hover" style="height:100%">
-          <el-carousel-item class="in-item" v-for="item in 3" :key="item">
-            <div v-if="item == 1">
-              <span>万物之中，希望至美</span>
+      <el-card shadow="always" class="card-con">
+        <el-row class="row-con">
+          <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="a">
+              <a href="https://movie.douban.com/subject/1296339/">
+              <img src="../assets/1.png" height="300" width="200" alt />
+              </a>
+          </el-col>
+          <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="b">
+            <div class="fcard-text">
+              <h3>豆瓣热评</h3>
+              <span>
+                <a href="https://www.douban.com/people/bighead/" style="text-decoration:none; color:#7ca575;">大头绿豆</a> <span class="time">2006-09-23</span> 
+              </span>
+              <span>两个人在试听间里听爱情歌曲的那一段，局促的空间里，想看对方，又有些矜持，目光刚一接触就赶紧离开，那么一段长长的时间，很好。餐厅里互打电话。对话总是很聪明。“很多人结婚的理由比这还少。”</span>
             </div>
-            <div v-else-if="item == 2"></div>
-          </el-carousel-item>
-        </el-carousel>
-      </div>
+          </el-col>
+        </el-row>
+      </el-card>
     </div>
     <div class="bottom">
-        <a  class="icp_link" href="http://www.beian.miit.gov.cn/">
-            京ICP备19050230号
-          </a>
+      <a class="icp_link" href="http://www.beian.miit.gov.cn/">京ICP备19050230号</a>
     </div>
   </div>
 </template>
@@ -52,26 +56,20 @@ export default {
   );
   font-size: 3rem;
 }
+
 .TajMahal {
-  //   display: flex;
-  //   justify-content: center;
-  //   flex-direction: column;
-  //   align-items: center;
   width: 100%;
   height: 100%;
-  // margin: 20px 10px;
-  // margin-top: 50px;
-  // background-color: white;
-  // opacity:0.3
 }
 .air1 {
-  height: 60%;
+  @include flex_x_y_center;
+  height: 98%;
   width: 100%;
 }
-.title{
-    @include flex_x_y_center;
-    height: 33%;
-    width: 100%;
+.title {
+  @include flex_x_y_center;
+  height: 33%;
+  width: 100%;
 }
 .content {
   height: 20%;
@@ -89,17 +87,52 @@ export default {
 }
 .in-item {
   @include flex_x_y_center;
+  height: 100%;
 }
-.bottom{
-    @include flex_x_y_center;
-    position: fixed;
-    bottom: 0;
-    height: 2%;
-    width: 100%;
-    background-color: beige;
+.bottom {
+  @include flex_x_y_center;
+  position: fixed;
+  bottom: 0;
+  height: 2%;
+  width: 100%;
+  background-color: beige;
 }
-.icp_link{
-    text-decoration:none;
-    color:black;
+.icp_link {
+  text-decoration: none;
+  color: black;
+}
+
+.fcard-text {
+  width: 200px;
+  word-break: break-all;
+  word-wrap: break-word;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.a {
+  @include flex_x_y_center;
+  padding: 5px 10px 2.5px 10px;
+}
+.b {
+  @include flex_x_y_center;
+  padding: 5px 10px 2.5px 10px;
+}
+
+.card-con {
+    // width: 300px;
+    background-color: #edf4ed
+  }
+@media screen and (max-width: 700px) {
+  .card-con {
+    width: 300px;
+    background-color: #edf4ed
+  }
+}
+.time{
+    color: #A9A9A9;
+    font-size: 1rem;
 }
 </style>
