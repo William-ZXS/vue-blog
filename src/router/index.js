@@ -11,11 +11,7 @@ export const constantRoutes = [
     component: () => import('@/components/Index'),
     hidden: true
   },
-  {
-    path: '/2',
-    component: () => import('@/components/Diy'),
-    hidden: true
-  },
+  
 ]
 
 const createRouter = () => new Router({

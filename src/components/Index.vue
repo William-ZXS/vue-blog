@@ -95,7 +95,7 @@ export default {
   bottom: 0;
   height: 2%;
   width: 100%;
-  background-color: beige;
+  background-color: #edf4ed;
 }
 .icp_link {
   text-decoration: none;
